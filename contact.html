@@ -13,9 +13,8 @@
     <div class="nav">
       <nav>
         <ul>
-            <li><a href="work.html">Work</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -24,7 +23,34 @@
     <header id="main">
     <h1>Contact</h1>
     </header>
-    <p>Please feel free to reach out if you have any questions about my work or resume, or if you just want to chat!</p>
+      <div class="contact">
+          <div style="text-align:center">
+            <p>Thank you so much for checking out my website! It truly is a reflection of me and my passion for user experience. </p> <br/>
+            <p>Please feel free to reach out if you have any questions about my work or classes, or if you just want to chat! I love meeting new people! </p> <br/>
+            <p>You can reach out to me through email, Link In, or the contact form below! Due to the large amount of commitments I have here at the University of Michigan, it may take me two business days to get back to you. </p> <br/>
+            <p><a href="https://www.linkedin.com/in/tess-perry-2a89a4191">Linked In</a></p> 
+            <p> tvperry@umich.edu </p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Where are you from</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Tell me about yourself..." style="height:170px"></textarea>
+                <input type="submit" value="Submit!">
+              </form>
+            </div>
+          </div>
+        </div>
     <footer>
       <p>Tess Perry ©2019<br/>
         Made with love! </p>

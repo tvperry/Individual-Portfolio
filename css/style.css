@@ -1,49 +1,86 @@
+/* Below is default, mobile view styling*/
+
+/* Setting rows and columns for mobile */
+.container{
+  display: grid; 
+  
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 70px auto auto auto auto 70px; 
+  
+  grid-row-gap: 15px; 
+  width: 100vw; 
+}
 
 body{
   font-family: Marcellus, serif;
-  background-color: #fcf7f2;
-  color: #ffafaf;
   font-size: 18px;
-  margin: 0;
-  padding: 0;
+
+  background-color: #fcf7f2;
+  color:#262626;
 }
 
 h1{
   font-family: "Marcellus", serif;
-  color: #262626;
+  color: #d52975;
   font-size: 50px;
   line-height: 1;
-  padding: 50px;
+  padding: 25px;
   text-align: center;
+
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
 }
 
 h2{
   font-size: 32px;
   line-height: 1.5;
-  font-family: "Karla", sans-serif;
-  color: #262626;
+  font-family: Marcellus, serif;
+  color: #d52975;
 }
 
+p{
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 3;
+  grid-row-end: span 1;
+
+  padding: 20px; 
+  line-height: 30px; 
+  text-align: center;
+}
+
+/* Navigation styling next three */
 nav li{
   display: inline-block;
   padding-right: 20px;
 }
 
 nav a{
-  color: #262626;
+  color:#262626;
   text-decoration: none; 
 }
 
-nav a:hover{
-  text-decoration: underline; 
+.nav{
+  text-align: left;
+  align-self: left;
+  padding: 20px;
+
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
 }
 
+/* Jump to content next three */
 .skip a{
   background:white;
   left: 15px;
   padding: 6px;
   position: absolute; 
   top: -40px; 
+  
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
@@ -71,77 +108,237 @@ footer{
   padding-bottom: 15px;
 }
 
-.container{
- 
-  display: grid; 
-  grid-template-columns: auto auto;
-  grid-row-gap: 15px; 
-
-  grid-template-rows: 70px auto auto auto 70px; 
-  width: 100vw; 
-}
-
-.nav{
-   /*Your code here */
-   text-align: left;
-   align-self: center;
-   padding-top: 20px;
-   padding-bottom: 20px; 
-
-   grid-column-start: 1;
-   grid-column-end: -1;
-   grid-row-start: 1;
-   grid-row-end: span 1;
-
-   padding: 20px 0; 
-   text-align: right; 
-}
-
+/* Setting homepage image placement and styling for default*/
 .homepage-image{
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 3;
-  grid-row-end: span 1;
+  grid-row-end: span 2;
 
   max-height: 700px;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
+/* Setting homepage text block placement for mobile */
 .about{
-  grid-column-start: 2;
-  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
   grid-row-start: 3;
   grid-row-end: span 1;
 }
 
-.work{
-  grid-column-start: 2;
-  grid-column-end: span 1;
-  grid-row-start: 4;
-  grid-row-end: span 1;
-}
-
+/*Setting homepage text block style for mobile */
 .text-block{
-  background-color: transparent;
+  background-color: #fcf7f2;
   border: 10px solid #262626;
   padding: 30px;
   align-self: center;
   justify-self: center;
 }
 
+/* Setting gallery images placement for mobile */
+.gallery-image{
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 4; 
+  grid-row-end: span 1;
+ } 
 
-/*DESKTOP*/
+ /* Setting gallery images size for mobile */
+ .gallery-image img{
+   width: 60px;
+   height: 120px;
+   padding: 10px;
+ }
+
+ /* Setting about me image placement for mobile */
+ .me-image{
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  width: 100%;
+
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+ } 
+
+ /* Setting about me image size for desktop */
+ .me-image img{
+  width: 40%;
+ } 
+
+ /* Styling for the hear animation next 4, used code pen for help*/
+ #heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  animation: heartbeat 1s infinite;
+  margin:0 auto
+}
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background:#d52975;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+      -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+        -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+  #heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+      -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+        -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+@keyframes heartbeat
+{
+0%
+{
+  transform: scale( .75 );
+}
+20%
+{
+  transform: scale( 1 );
+}
+40%
+{
+  transform: scale( .75 );
+}
+60%
+{
+  transform: scale( 1 );
+}
+80%
+{
+  transform: scale( .75 );
+}
+100%
+{
+  transform: scale( .75 );
+}
+}  
+
+/*TABLET VIEW*/
+@media screen and (min-width: 600px ){
+  
+  /* Setting rows and columns for tablet */
+  .container{
+    grid-template-rows: 70px auto auto auto auto 70px;
+    grid-template-columns: auto auto auto auto auto auto; 
+  } 
+
+  p{
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+  
+    padding: 20px; 
+    line-height: 30px; 
+    text-align: center;
+  }
+  
+  /* Making navigation different */
+  .nav{
+    background-color: #ffafaf;
+   
+   text-align: right;
+   align-self: center;
+   padding-top: 35px;
+   padding-bottom: 35px;
+
+   grid-column-start: 1;
+   grid-column-end: -1;
+   grid-row-start: 1;
+   grid-row-end: span 1;
+  }
+
+/* Setting gallery images placement for mobile */
+.gallery-image{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4; 
+  grid-row-end: span 1;
+ } 
+
+ /* Setting gallery images size for mobile */
+ .gallery-image img{
+   width: 80px;
+   height: 140px;
+   padding: 10px;
+ }
+
+ /* Setting about me image placement for mobile */
+ .me-image{
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  width: 100%;
+
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+ } 
+
+ /* Setting about me image size for desktop */
+ .me-image img{
+  width: 80%;
+ }
+
+}
+
+/*DESKTOP VIEW*/
 @media screen and (min-width: 800px){ 
 
+  /* Setting rows and columns for desktop */
   .container{
-
     grid-template-rows: 70px auto auto auto 70px;
     grid-template-columns: auto auto auto auto auto; 
   }
 
-  .nav{
-    background-color: transparent;
+  p{
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+  
+    padding: 20px; 
+    line-height: 30px; 
+    text-align: center;
+  }
 
+  /* Navigation hover on desktop view  */
+  nav a:hover{
+    text-decoration: underline; 
+  }
+  
+  /* Making navigation different on desktop */
+  .nav{
+      background-color: transparent;
      
      text-align: center;
      align-self: center;
@@ -154,16 +351,7 @@ footer{
      grid-row-end: span 1;
   }
 
-    .homepage-image{
-      grid-column-start: 1;
-      grid-column-end: -1;
-      grid-row-start: 3;
-      grid-row-end: span 2;
-    
-      max-height: 700px;
-      overflow: hidden;
-    }
-
+  /* Setting homepage text block placement for desktop*/
   .about{
     grid-column-start: 2;
     grid-column-end: span 1;
@@ -171,23 +359,115 @@ footer{
     grid-row-end: span 1;
   }
 
-  .work{
-     grid-column-start: 3;
-     grid-column-end: span 1;
-     grid-row-start: 4;
-     grid-row-end: span 1;
-  }
-
+  /* Setting homepage text block style for desktop */
   .text-block{
     background-color: transparent;
-    border: 10px solid #262626;
-    padding: 30px;
+    border: 5px solid transparent;
+    padding: 15px;
     align-self: center;
     justify-self: center;
   }
 
-}  
+  /* Setting gallery images placement for desktop */
+  .gallery-image{
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 4; 
+    grid-row-end: span 1;
+   } 
 
+   /* Setting gallery images size for desktop */
+   .gallery-image img{
+     width: 400px;
+     height: 550px;
+     padding: 10px;
+   }
+
+   /* Setting homepage image placement for desktop */
+   .homepage-image{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 3;
+    grid-row-end: span 3;
+    width: 100%;
+
+    overflow: hidden;
+   } 
+
+   /* Setting homepage image size for desktop */
+   .homepage-image img{
+    width: 100% 
+   } 
+
+   /* Setting about me image placement for desktop */
+   .me-image{
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    width: 100%;
+
+    overflow: hidden;
+   } 
+
+   /* Setting about me image size for desktop */
+   .me-image img{
+    width: 25%;
+   } 
+
+   /* contact form styleing code are next 6, used w3schools for help on having a contact form*/
+   * {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #d52975;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #d52975;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .column {
+    margin-top: 6px;
+    padding: 20px;
+
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+  }
+
+
+/* Responsive layout for the contact form when screen size is reduced */
+@media screen and (max-width: 600px) {
+  
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Reduced mototion media query */
 @media screen and (prefers-reduced-motion: reduce){
 
   .skip a{
@@ -196,8 +476,8 @@ footer{
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: top 1s auto;/* Your code here - set to default setting */
-    transition: top 1s auto; /* Your code here - set to default setting */
+    -webkit-transition: top 1s auto;
+    transition: top 1s auto; 
     z-index: 1;
   }
 
